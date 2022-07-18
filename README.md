@@ -67,3 +67,6 @@
 
 - Utilizando Mocks da maneira correta:
   - Começaremos a utilizar dependencias no SignUpController - Mock
+  - Iremos validar se o email passado é um email válido
+    - Iremos validar em um componente fora do SignUpController
+    -

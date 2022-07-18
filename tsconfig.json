@@ -55,7 +55,7 @@
       "strictPropertyInitialization": true,
       "noImplicitThis": true,
       "useUnknownInCatchVariables": true,
-      "noUnusedLocals": true,
+      "noUnusedLocals": false,
       "noUnusedParameters": true,
       "exactOptionalPropertyTypes": true,
       "noImplicitReturns": true,
