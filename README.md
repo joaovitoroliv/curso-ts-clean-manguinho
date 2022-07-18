@@ -28,5 +28,6 @@
       - fix -> bug fix
       - chore -> adicionar configuracao ao projeto (biblioteca nova por exemplo)
       - docs -> mudanca na documentacao
-      - refactor -> refatoracao
-  - 
+      - refactor -> refatoracao de código
+  - Adicionou git-commit-msg-linter para garantir o formato de commit -> `npm install -D git-commit-msg-linter`
+  - Criou o .gitignore
