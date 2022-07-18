@@ -72,4 +72,18 @@
 - Testando exceções e integrando com o Email validator
   - Preciso garantir que o email que será passado no isValid é o email que está sendo enviado no corpo da requisição (está contido no makeSut)
 - Vários imports de erros separados -> `index.ts`
-- Isolar a criação de um `EmailValidator` para
+- Isolar a criação de um `EmailValidator` para um Factory:
+
+```javascript
+const makeEmailValidatorWithError = (): EmailValidator => {
+  class EmailValidatorStub implements EmailValidator {
+    isValid(_email: string): boolean {
+      throw new Error();
+    }
+  }
+  return new EmailValidatorStub();
+};
+```
+
+- Integrando com o AddAccount Usecase:
+  -
