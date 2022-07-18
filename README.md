@@ -33,3 +33,6 @@
   - Criou o .gitignore
   - Adicionar typescript e a tipagem `npm i -D typescript @types/node`
     - Criou `tscofig.json` 
+  - Adicionar o Linter para o Typescript -> `npm install --save-dev eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin` - [Get Started](https://typescript-eslint.io/docs/linting/)
+    - Download da extensão do ESlint
+    - Criar arquivo `.eslintrc`
