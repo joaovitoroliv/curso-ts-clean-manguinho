@@ -1,9 +1,70 @@
 {
     "compilerOptions": {
-        "outDir": "./dist",
-        "module": "commonjs",
-        "target": "es2019",
-        "esModuleInterop": true,
-        "allowJs": true
-    }
-}
+      "target": "ESNext",
+      "lib": [
+        "ESNext"
+      ],
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "module": "CommonJS",
+      "rootDir": "./src",
+      "moduleResolution": "node",
+      "typeRoots": [
+        "@types",
+        "./node_modules/@types"
+      ],
+      "baseUrl": "./",
+      "paths": {
+        "@database/*": [
+          "./src/database/*"
+        ],
+        "@errors/*": [
+          "./src/errors/*"
+        ],
+        "@config/*": [
+          "./src/config/*"
+        ],
+        "@routes/*": [
+          "./src/routes/*"
+        ],
+        "@models/*": [
+          "./src/models/*"
+        ],
+        "@utils/*": [   
+          "./src/utils/*"
+        ],
+        "@views/*": [
+          "./src/views/*"
+        ],
+        "@middlewares/*": [
+          "./src/middlewares/*"
+        ]
+      },
+      "resolveJsonModule": true,
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,
+      "outDir": "./build",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "strictFunctionTypes": true,
+      "strictBindCallApply": true,
+      "strictPropertyInitialization": true,
+      "noImplicitThis": true,
+      "useUnknownInCatchVariables": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "exactOptionalPropertyTypes": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitOverride": true,
+      "skipLibCheck": true
+    },
+    "include": [
+      "src"
+    ]
+  }
+  

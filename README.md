@@ -42,4 +42,3 @@
     - Criar arquivo `.eslintrc`
   - Instalar o husky
   - Instalar lint-stage
-  - Teste
