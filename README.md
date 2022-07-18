@@ -64,3 +64,6 @@
 - Criação do `missing-param-error.ts`
 - Criação do bad request
 - Criar uma interface em `protocols/controller.ts`
+
+- Utilizando Mocks da maneira correta:
+  - Começaremos a utilizar dependencias no SignUpController - Mock
