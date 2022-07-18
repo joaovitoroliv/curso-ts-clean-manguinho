@@ -62,3 +62,5 @@
 - Comitar sempre o arquivo de producao, depois o arquivo de teste
 - Tipar meu erro
 - Criação do `missing-param-error.ts`
+- Criação do bad request
+- Criar uma interface em `protocols/controller.ts`
