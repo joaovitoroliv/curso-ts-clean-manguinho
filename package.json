@@ -1,0 +1,12 @@
+{
+  "name": "curso-ts-clean-manguinho",
+  "version": "1.0.0",
+  "description": "[Github](https://github.com/rmanguinho/clean-ts-api)",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
