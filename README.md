@@ -96,7 +96,7 @@ return {
 ```
 
 - Criar um factory para criação de conta
-- Vamos criar uma interface para a regra de negócio
+- Vamos criar uma interface para a regra de negócio - `account.ts` e `add-account.ts`
 
 ```javascript
 import { AccountModel } from "../models/account";
@@ -110,3 +110,6 @@ export interface AddAccount {
   add(account: AddAccountModel): AccountModel;
 }
 ```
+
+- Refatorar os protocolos
+
