@@ -4,8 +4,8 @@
   "description": "[Github](https://github.com/rmanguinho/clean-ts-api)",
   "main": "test.js",
   "scripts": {
-    "test": "jest",
-    "test:staged": "jest",
+    "test": "jest -passWithNoTests",
+    "test:staged": "jest --passWithNoTests",
     "lint": "eslint ./src ./test --ext .ts",
     "lint:fix": "eslint ./src ./test --ext .ts --fix"
   },

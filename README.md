@@ -4,7 +4,8 @@
 
 ## Sumário:
 
-[Introdução](#introdução)
+- [Introdução](#introdução)
+- [SignUp API - Presentation Layer](#signup-api---presentation-layer)
 
 ## Introdução
 
@@ -45,3 +46,17 @@
   - Configurar biblioteca de teste
     - `npm i -D jest @types/jest ts-jest`
     - `jest --init`
+- Clean Architecture do nosso projeto:
+  - Inversão de dependência: Adapter - ExpressRouteAdapter (Adaptador de Interfaces)
+  - Adapter está olhando para a camada de Presentation Layer
+  - Adapter aponta para o Express
+  - Camada de Utils que pode ser utilizado em qualquer lugar
+  - Data layer - implementações da regra de negócio
+  - Infra Layer - implementações de interfaces voltadas para Frameworks - BcryptAdapter
+  - Main Layer irá criar instância de tudo e vai fazer a composição dos objetos - composite
+    <img src=arquitetura.PNG>
+
+## SignUp API - Presentation Layer
+
+- Criar `signup.spec.ts` e `signup.ts`;
+- Comitar sempre o arquivo de producao, depois o arquivo de teste
