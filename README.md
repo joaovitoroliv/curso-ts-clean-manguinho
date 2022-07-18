@@ -42,4 +42,6 @@
     - Criar arquivo `.eslintrc`
   - Instalar o husky
   - Instalar lint-stage
-  - Teste Lint-staged
+  - Configurar biblioteca de teste
+    - `npm i -D jest @types/jest ts-jest`
+    - `jest --init`
