@@ -31,3 +31,4 @@
       - refactor -> refatoracao de código
   - Adicionou git-commit-msg-linter para garantir o formato de commit -> `npm install -D git-commit-msg-linter`
   - Criou o .gitignore
+  - Adicionar typescript e a tipagem `npm i -D typescript @types/node`
