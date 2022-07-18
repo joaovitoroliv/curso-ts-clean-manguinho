@@ -86,4 +86,27 @@ const makeEmailValidatorWithError = (): EmailValidator => {
 ```
 
 - Integrando com o AddAccount Usecase:
-  -
+
+```javascript
+// Se chegou até aqui é pq ta validado, portanto deve criar uma conta
+return {
+  statusCode: 500,
+  body: new Error("Deu ruim"),
+};
+```
+
+- Criar um factory para criação de conta
+- Vamos criar uma interface para a regra de negócio
+
+```javascript
+import { AccountModel } from "../models/account";
+export interface AddAccountModel {
+  name: string;
+  email: string;
+  password: string;
+}
+// "A interface AddAccount tem um método add que recebe um AddAccountModel e retorna um AccountModel"
+export interface AddAccount {
+  add(account: AddAccountModel): AccountModel;
+}
+```
