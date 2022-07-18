@@ -69,4 +69,5 @@
   - Começaremos a utilizar dependencias no SignUpController - Mock
   - Iremos validar se o email passado é um email válido
     - Iremos validar em um componente fora do SignUpController
-    -
+- Testando exceções e integrando com o Email validator
+  - Preciso garantir que o email que será passado no isValid é o email que está sendo enviado no corpo da requisição (está contido no makeSut)
