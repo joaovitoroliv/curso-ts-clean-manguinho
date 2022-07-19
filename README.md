@@ -140,9 +140,10 @@ export interface AddAccount {
 
 ## SignUp API - Data Layer
 
-- Criando o DbAddAccount e integrando com o Encrypter
+- Criando o DbAddAccount e integrando com o Encrypter:
   - Nessa aula começaremos a testar a camada de Data Layer (Camada que fazemos implementação de algum protocolo que venha do Domain)
   - No nosso caso temos apenas o protocolo `add-account.ts`, iremos criar uma implementação voltada para o Banco de Dados
   - Criar um arquivo `/src/data/usecases/db-add-account.spec.ts`
   - Classe irá receber os dados formatados corretamente do Controller, garantidos que os dados são validos e passou pro AddAccount apenas o nome, email e senha.
-  - Precisamos cryptografar a senha com Encrypter
+- Integrando com o AddAccountRepository:
+  - Centralizar interfaces em um arquivo -> `db-add-account-protocols.ts`
