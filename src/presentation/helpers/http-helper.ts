@@ -1,4 +1,3 @@
-// import { HttpResponse } from '../protocols/http'
 // export const badRequest = (error: Error): HttpResponse => {
 //   return {
 //     statusCode: 400,
@@ -6,7 +5,7 @@
 //   }
 // }
 // Syntax Sugar
-import { ServerError } from '../erros/server-error'
+import { ServerError } from '../erros'
 import { HttpResponse } from '../protocols/http'
 
 export const badRequest = (error: Error): HttpResponse => ({
