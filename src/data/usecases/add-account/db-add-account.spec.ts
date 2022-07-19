@@ -5,7 +5,7 @@ import { DbAddAccount } from './db-add-account'
 const makeEncrypter = (): Encrypter => {
   class EncrypterStub implements Encrypter {
     // Método encrypt, que recebe um value do tipo string e retorna o value criptografado em forma de string
-    async encrypt(_value: string): Promise<string> {
+    async encrypt(value: string): Promise<string> {
       return new Promise(resolve => resolve('hashed_password'))
     }
   }
@@ -14,12 +14,12 @@ const makeEncrypter = (): Encrypter => {
 // Factory -
 const makeAddAccountRepository = (): AddAccountRepository => {
   class AddAccountRepositoryStub implements AddAccountRepository {
-    async add(accountData: AddAccountModel): Promise<AccountModel> {
+    async add (accountData: AddAccountModel): Promise<AccountModel> {
       const fakeAccount = {
         id: 'valid_id',
         name: 'valid_name',
         email: 'valid_email',
-        password: 'valid_password'
+        password: 'hashed_password'
       }
       return new Promise(resolve => resolve(fakeAccount))
     }
@@ -67,7 +67,7 @@ describe('DbAddAccount Usecase', () => {
       password: 'valid_password'
     }
     const promise = sut.add(accountData)
-    expect(promise).rejects.toThrow()
+    await expect(promise).rejects.toThrow()
   })
   // Protocolo que irá ter um método que irá criar uma conta
   test('Should call AddAccountRepository with correct values', async () => {
@@ -85,5 +85,17 @@ describe('DbAddAccount Usecase', () => {
       email: 'valid_email',
       password: 'hashed_password'
     })
+  })
+
+  test('Should throw if AddAccountRepository throws', async () => {
+    const { sut, addAccountRepositoryStub } = makeSut()
+    jest.spyOn(addAccountRepositoryStub, 'add').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
+    const accountData = {
+      name: 'valid_name',
+      email: 'valid_email',
+      password: 'valid_password'
+    }
+    const promise = sut.add(accountData)
+    await expect(promise).rejects.toThrow()
   })
 })

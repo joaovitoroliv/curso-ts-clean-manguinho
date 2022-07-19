@@ -149,3 +149,5 @@ export interface AddAccount {
   - Centralizar interfaces em um arquivo -> `db-add-account-protocols.ts`
   - Adicionar uma conta de um usuário em um banco de dados -> integrar com testes
   - Da forma que está sendo realizado, minha camada de Infra esta visualizando o Domain, sendo que ele tinha q visualizar somente o Data Layer. Como resolver? Replicando Models. Mas não vamos fazer isso
+  - Se o AddAccountRepository retornar uma exceção -> `Should throw if AddAccountRepository throws` test
+  - Tive um grande problema pois estava retornando uma `new Promise(resolve => resolve(null as any))` ao invés de `return account` em `db-add-account.ts`
