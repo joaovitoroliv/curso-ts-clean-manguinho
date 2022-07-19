@@ -135,3 +135,14 @@ export interface AddAccount {
   - Criando testes para o EmailValidator -> `email-validator-adapter.spec.ts` e `email-validator.ts`
   - Instalando biblioteca do "EmailValidator" e seus tipos -> `npm i validator` e `npm i @types/validator -D`
   - Realizando os testes, foi percebido que 'invalid_email@mail.com' é um email válido pela biblioteca validator. Não queremos como saber como validar um email, queremos mockar a biblioteca pois, se o método isValid retornar true, quero que o sut retorne true também."
+  - Concluido o Adapter da validação de Email
+    - Caso no futuro a gente queira trocar a biblioteca é bem simples
+
+## SignUp API - Data Layer
+
+- Criando o DbAddAccount e integrando com o Encrypter
+  - Nessa aula começaremos a testar a camada de Data Layer (Camada que fazemos implementação de algum protocolo que venha do Domain)
+  - No nosso caso temos apenas o protocolo `add-account.ts`, iremos criar uma implementação voltada para o Banco de Dados
+  - Criar um arquivo `/src/data/usecases/db-add-account.spec.ts`
+  - Classe irá receber os dados formatados corretamente do Controller, garantidos que os dados são validos e passou pro AddAccount apenas o nome, email e senha.
+  - Precisamos cryptografar a senha com Encrypter
