@@ -7,15 +7,20 @@ interface SutTypes {
   encrypterStub: Encrypter
 }
 
-// Factory
-const makeSut = (): SutTypes => {
-  class EncrypterStub {
+// Factory - Função que não recebe nada e retorna um Encrypter
+const makeEncrypter = (): Encrypter => {
+  class EncrypterStub implements Encrypter {
     // Método encrypt, que recebe um value do tipo string e retorna o value criptografado em forma de string
     async encrypt(_value: string): Promise<string> {
       return new Promise(resolve => resolve('hashed_password'))
     }
   }
-  const encrypterStub = new EncrypterStub()
+  return new EncrypterStub()
+}
+
+// Factory
+const makeSut = (): SutTypes => {
+  const encrypterStub = makeEncrypter()
   const sut = new DbAddAccount(encrypterStub)
   return {
     sut,
