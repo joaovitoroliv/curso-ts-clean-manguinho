@@ -111,5 +111,7 @@ export interface AddAccount {
 }
 ```
 
-- Refatorar os protocolos
-
+- Refatorando os protocolos
+- Criando um caso de sucesso para que os valores estejam válidos
+- Adicionando `async` aos métodos - preciso adicionar `Promise<T>`
+  - Ex: `async add(_account: AddAccountModel): Promise<AccountModel>`
