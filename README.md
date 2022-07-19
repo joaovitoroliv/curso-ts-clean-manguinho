@@ -6,6 +6,10 @@
 
 - [Introdução](#introdução)
 - [SignUp API - Presentation Layer](#signup-api---presentation-layer)
+- [Jest](#jest)
+- [Utils Layer](#utils-layer)
+- [SignUp API - Data Layer](#signup-api---data-layer)
+- [SignUp API - Infra Layer](#signup-api---infra-layer)
 
 ## Introdução
 
