@@ -118,4 +118,12 @@ export interface AddAccount {
 
 ## Jest
 
-- ## Configurando o Jest e criando scripts de testes:
+- Configurando o Jest e criando scripts de testes:
+  - Criando scripts:
+    `````javascript
+    "test": "jest --passWithNoTests --silent --noStackTrace",
+    "test:verbose": "jest --passWithNoTests",
+    "test:unit": "npm test -- --watch",````
+    `````
+  - Teste unitário - `.spec.ts`
+  - Teste de integração - `.test.ts`
