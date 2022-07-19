@@ -147,3 +147,5 @@ export interface AddAccount {
   - Classe irá receber os dados formatados corretamente do Controller, garantidos que os dados são validos e passou pro AddAccount apenas o nome, email e senha.
 - Integrando com o AddAccountRepository:
   - Centralizar interfaces em um arquivo -> `db-add-account-protocols.ts`
+  - Adicionar uma conta de um usuário em um banco de dados -> integrar com testes
+  - Da forma que está sendo realizado, minha camada de Infra esta visualizando o Domain, sendo que ele tinha q visualizar somente o Data Layer. Como resolver? Replicando Models. Mas não vamos fazer isso
