@@ -127,3 +127,9 @@ export interface AddAccount {
     `````
   - Teste unitário - `.spec.ts`
   - Teste de integração - `.test.ts`
+
+## Utils Layer
+
+- Criando o EmailValidatorAdapter e Mockando o Validator:
+  - Concluimos a construção do nosso controller e ja criamos também o use-case -> agora podemos criar o EmailValidator ou AddAccount
+  -
