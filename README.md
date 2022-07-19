@@ -134,4 +134,4 @@ export interface AddAccount {
   - Concluimos a construção do nosso controller e ja criamos também o use-case -> agora podemos criar o EmailValidator ou AddAccount
   - Criando testes para o EmailValidator -> `email-validator-adapter.spec.ts` e `email-validator.ts`
   - Instalando biblioteca do "EmailValidator" e seus tipos -> `npm i validator` e `npm i @types/validator -D`
-  - Realizando os testes, foi percebido que 'invalid_email@mail.com' é um email válido pela biblioteca validator. Não queremos como saber como validar um email, queremos mockar a biblioteca pois, 'se o método isValid retornar true, quero que o sut retorne true também."
+  - Realizando os testes, foi percebido que 'invalid_email@mail.com' é um email válido pela biblioteca validator. Não queremos como saber como validar um email, queremos mockar a biblioteca pois, se o método isValid retornar true, quero que o sut retorne true também."
