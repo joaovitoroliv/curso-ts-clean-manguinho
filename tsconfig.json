@@ -56,7 +56,7 @@
       "noImplicitThis": true,
       "useUnknownInCatchVariables": true,
       "noUnusedLocals": false,
-      "noUnusedParameters": true,
+      "noUnusedParameters": false,
       "exactOptionalPropertyTypes": true,
       "noImplicitReturns": true,
       "noFallthroughCasesInSwitch": true,
